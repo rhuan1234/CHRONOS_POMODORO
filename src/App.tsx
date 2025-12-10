@@ -4,10 +4,11 @@ import './styles/theme.css';
 function App() {
   return (
     <div>
-      <Heading/>
+      <Heading attr={123} attr2='String'>Olá Mundo 1</Heading>
+      
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-        voluptatum labore sed iusto iste perspiciatis est et hic accusamus
+        voluptatum labo re sed iusto iste perspiciatis est et hic accusamus
         inventore aperiam animi laudantium itaque earum, fugiat, veniam possimus
         ipsum ab?
       </p>
