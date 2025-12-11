@@ -1,10 +1,15 @@
+import { TimerIcon } from 'lucide-react';
 import { Heading } from './components/Heading';
 import './styles/global.css';
 import './styles/theme.css';
 function App() {
   return (
     <div>
-      <Heading attr={123} attr2='String'>Olá Mundo 1</Heading>
+      <Heading>Olá Mundo 1
+        <button>
+          <TimerIcon/>
+        </button>
+      </Heading>
       
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
