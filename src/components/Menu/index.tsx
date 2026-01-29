@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Styles.module.css';
 import { HistoryIcon, HouseIcon, MoonIcon, SettingsIcon, SunIcon } from 'lucide-react';
+import { RouterLink } from '../RouterLink';
 
 type AvailableThemes = 'dark' | 'light';
 export function Menu() {
@@ -29,15 +30,15 @@ export function Menu() {
         }, [theme]);
 
   return <nav className={styles.menu}>
-    <a className={styles.menuLink} href='#' title='Ir para a Home'>
+    <RouterLink className={styles.menuLink} href='/' title='Ir para a Home'>
         <HouseIcon/>
-    </a>
-    <a className={styles.menuLink} href='#' title='Ver Histórico'>
+    </RouterLink>
+    <RouterLink className={styles.menuLink} href='/history/' title='Ver Histórico'>
         <HistoryIcon/>
-    </a>
-    <a className={styles.menuLink} href='#' title='Configurações'>
+    </RouterLink>
+    <RouterLink className={styles.menuLink} href='/settings' title='Configurações'>
         <SettingsIcon/>
-    </a>
+    </RouterLink>
     <a className={styles.menuLink} href='#' title='Mudar Tema' onClick={(event) => handleTeamChange(event)}>
         {nextThemeIcon[theme]}
     </a>

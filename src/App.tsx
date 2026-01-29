@@ -1,13 +1,18 @@
-import './styles/global.css';
 import './styles/theme.css';
-import { Home } from './pages/Home';
-import { AboutPomodoro } from './pages/AboutPomodoro';
-import { NotFound } from './pages/NotFound';
+import './styles/global.css';
+import { TaskContextProvider } from './contexts/TaskContent/TaskContextProvider';
+import { MessagesContainer } from './components/MessagesContainer';
+import { MainRouter } from './routes/MainRouter';
+export function App() {
 
-function App() {
   return (
-    <Home/>
+    
+    <TaskContextProvider>
+      <MessagesContainer>
+        <MainRouter/>
+      </MessagesContainer>
+      
+            
+    </TaskContextProvider>
   );
 }
-
-export { App };
